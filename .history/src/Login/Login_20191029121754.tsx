@@ -16,7 +16,7 @@ class Login extends React.Component<LoginProps, LoginState> {
     
     return ( <div>
         <h1>Login</h1>
-        <form onSubmit={this.onSubmitHandler}>
+        <form>
           <div>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Email" />

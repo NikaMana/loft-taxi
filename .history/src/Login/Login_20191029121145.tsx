@@ -7,16 +7,12 @@ export interface LoginProps {
 export interface LoginState {}
  
 class Login extends React.Component<LoginProps, LoginState> {
-  onSubmitHandler = (e: any) => {
-    e.preventDefault();
-    const {setPath} = this.props;
-    setPath("profile")
-  } 
+  state = { }
   render() { 
     
     return ( <div>
         <h1>Login</h1>
-        <form onSubmit={this.onSubmitHandler}>
+        <form>
           <div>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Email" />

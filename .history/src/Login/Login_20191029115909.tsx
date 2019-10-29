@@ -1,0 +1,27 @@
+import React from 'react';
+import Nav from '../Nav';
+
+export interface LoginProps {}
+ 
+export interface LoginState {}
+ 
+class Login extends React.Component<LoginProps, LoginState> {
+  state = { }
+  render() { 
+    
+    return ( <div>
+        <h1>Login</h1>
+        <form>
+          <div>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+          <button>Login</button>
+        </form>
+    </div> );
+  }
+}
+ 
+export default Login;
