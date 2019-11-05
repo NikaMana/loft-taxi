@@ -13,9 +13,4 @@ it('renders without crashing', () => {
 it('renders shallow', () => {
   const wrapper = shallow(<App />);
   expect(wrapper.contains(<ExampleComponent />)).toEqual(true);
-});
-
-it('renders correctly', () => {
-  const tree = renderer.create(<App />).toJSON();
-  expect(tree).toMatchSnapshot();
 })

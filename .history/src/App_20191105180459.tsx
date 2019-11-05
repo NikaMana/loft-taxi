@@ -6,7 +6,6 @@ import Profile from './Profile';
 import Nav from './Nav';
 import PropTypes from 'prop-types';
 import { AuthProvider, AuthContext } from './Auth.Context';
-import Layout from './Layout';
 
 export interface AppProps {}
  
@@ -51,13 +50,6 @@ class App extends React.Component<AppProps, AppState> {
       //   </AuthProvider>
       // }
     }
-  }
-
-const App = () => {
-  return {
-    <AuthProvider>
-      <Layout></Layout>
-    </AuthProvider>
   }
 }
  

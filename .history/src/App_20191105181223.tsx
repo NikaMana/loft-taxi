@@ -56,7 +56,7 @@ class App extends React.Component<AppProps, AppState> {
 const App = () => {
   return {
     <AuthProvider>
-      <Layout></Layout>
+      
     </AuthProvider>
   }
 }

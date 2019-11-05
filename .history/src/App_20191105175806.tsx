@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
 import Login from './Login';
 import Map from './Map';
 import Profile from './Profile';
 import Nav from './Nav';
 import PropTypes from 'prop-types';
-import { AuthProvider, AuthContext } from './Auth.Context';
-import Layout from './Layout';
+import {AuthProvider, AuthContext} from './Auth.Context';
 
 export interface AppProps {}
  
@@ -40,24 +39,17 @@ class App extends React.Component<AppProps, AppState> {
       {path !== "login" && <Nav setPath={this.setPath}></Nav>}
       <div>{this.setComponent()}</div>
     </div> ;
-      // {
-      //   <AuthProvider>
-      //     <AudioContext.Consumer>
-      //       {({ is.Auth, authHandler }) => (
-      //       <div>{isAuth ? <div>Залогинем</div> : <div>Не залогинен</div>}
-      //       <button onClick={() => AuthHandler()}>Нажми на меня!</button></div>
-      //       )}
-      //     </AudioContext.Consumer>
-      //   </AuthProvider>
-      // }
+      {
+        <AuthProvider>
+          <AudioContext.Consumer>
+            {({ is.Auth, authHandler, }) => (
+            <div>{isAuth ? <div>Залогинем</div> : <div>Не залогинен</div>}
+            <button onClick={() => AuthHandler()}>Нажми на меня!</button></div>
+            )}
+          </AudioContext.Consumer>
+        </AuthProvider>
+      }
     }
-  }
-
-const App = () => {
-  return {
-    <AuthProvider>
-      <Layout></Layout>
-    </AuthProvider>
   }
 }
  
